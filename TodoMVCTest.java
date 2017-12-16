@@ -26,7 +26,6 @@ public class TodoMVCTest {
 
         $$("#todo-list li").find(exactText("Task 4")).find(".toggle").click();// mark task 4 completed
         $$("#todo-list li").find(exactText("Task 4")).shouldHave(cssClass("completed"));// check: task 4 marked?
-        $("#toggle-all").shouldBe(checked);
 
         $("#clear-completed").click();// clear completed tasks
         $$("#todo-list li").shouldHave(exactTexts("Task 1", "Task 3")); // check: task 4 removed as completed?
